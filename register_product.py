@@ -1,4 +1,4 @@
-#Create a Diccionary for save the tuples 
+#Create a Diccionary for save the tuples.
 registered_products = {}
 
 # I did 3 function for call the product_id, product_name and unit_price, for the product and implement in tuples 
@@ -8,13 +8,12 @@ def product_id():
 def product_name():
     return input("Enter Product Name: ")   
 
-# Place a for loop to iterate through the price unit and give the user 3 attempts to enter the price correctly.
 def unit_price():
-    for i in range(3):
+    for i in range(3):       # Place a for loop to iterate through the price unit and give the user 3 attempts to enter the price correctly.
         try:
             price = float(input(f"Enter Unit Price: "))
-            if price < 0:
-                print("Unit Price cannot be negative. Please try again.")
+            if price <= 0:
+                print("Unit Price cannot be negative or 0. Please try again.")
                 continue
             return price
         except ValueError:
