@@ -26,5 +26,4 @@ product = (prod_id, prod_name, prod_price)
 
 registered_products[prod_id] = product
 
-print("Product registered successfully!")
-
+print(product)
