@@ -1,35 +1,36 @@
-#Create a Diccionary for save the tuples.
 registered_products = {}
 
-# I did 3 function for call the product_id, product_name and unit_price, for the product and implement in tuples 
-def product_id():
-    return input("Enter Product ID: ")
-
-def product_name():
-    return input("Enter Product Name: ")   
-
 def unit_price():
-    for i in range(3):       # Place a for loop to iterate through the price unit and give the user 3 attempts to enter the price correctly.
+    for i in range(3):      
         try:
-            price = float(input(f"Enter Unit Price: "))
+            price = float(input("Enter Unit Price: "))
             if price <= 0:
-                print("Unit Price cannot be negative or 0. Please try again.")
+                print("Unit Price cannot be negative or zero. Please try again.")
                 continue
             return price
         except ValueError:
             print("Invalid input. Please enter a valid number for Unit Price.")
+            return None
+        
+p = True
 
+while p:
+    product_id = input("\nEnter Product ID: ")
+    if product_id in registered_products:
+        print(f"Error: El ID '{product_id}' Already exist.")
+        
 
-#Create abbreviations for the variables: (product_id, product_name, and unit_price), so you can enter them into a Tuple.  
+    product_name = input("Enter Product Name: ")
+    prod_price = unit_price()
 
-prod_id = product_id()
-prod_name = product_name()
-prod_price = unit_price()
+    if prod_price is not None:
+        product = (product_id, product_name, prod_price)
+        registered_products[product_id] = product
+        print("Product registered successfully!")
+    else:
+        print("Could not register product due to price errors.")
+    again = input("Do you want to add another product? (y/n): ").lower()
+    if again != 'y':
+        p = False
 
-#Here I call the variables in a Tuple.
-product = (prod_id, prod_name, prod_price)
-
-#Here call the tuples to enter them into a dict.
-registered_products[prod_id] = product
-
-print(product)
+print("\nFinal Inventory:", registered_products)
