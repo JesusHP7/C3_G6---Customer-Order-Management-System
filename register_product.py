@@ -1,3 +1,5 @@
+registered_products = {}
+
 def product_id():
     return input("Enter Product ID: ")
 
@@ -14,32 +16,15 @@ def unit_price():
             return price
         except ValueError:
             print("Invalid input. Please enter a valid number for Unit Price.")
-            return 0.0
 
-def total_price(quantity, unit_price):
-    return quantity * unit_price
 
-if __name__ == "__main__":
-    print("Product Registration")
-    print("--------------------")
-    continue_registration = True 
+prod_id = product_id()
+prod_name = product_name()
+prod_price = unit_price()
 
-    while continue_registration:
-        p_id = product_id()
-        p_name = product_name()
-        price = unit_price()
+product = (prod_id, prod_name, prod_price)
 
-        print("=" * 20)
-        print("\nProduct Details:")
-        print(f"Product ID: {p_id}")
-        print(f"Product Name: {p_name}")
-        print(f"Unit Price: ${price:.2f}")
+registered_products[prod_id] = product
 
-        user_input = input("Do you want to register another product? (yes/no): ").lower()
-        if user_input == 'yes':
-            print("\nRegistering another product...\n")
-        elif user_input == 'no':
-            print("Exiting product registration.")
-            continue_registration = False
-        else:
-            print("Invalid input. Please enter 'yes' or 'no'.")
+print("Product registered successfully!")
+
