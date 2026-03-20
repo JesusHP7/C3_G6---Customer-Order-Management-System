@@ -1,58 +1,38 @@
 Client & Order Management System
-A lightweight Python-based Command Line Interface (CLI) application designed to manage client registrations, product inventories, and sales orders. It includes data validation and automated reporting features.
+
+A lightweight Python CLI application for managing clients, products, and sales orders with data validation and automated reporting. 
 
 🚀 Features
-Client Management: Register clients with unique IDs, name validation, and email verification (supports Gmail and Hotmail).
-
-Inventory Control: Add new products to the system with automated price validation.
-
-Order Processing: Link products to specific clients, calculate totals automatically, and track order history.
-
+Client Management: Register clients with unique IDs, valid names (letters/spaces), and verified emails (@gmail.com, @hotmail.com).
+Inventory Control: Add products with automated price validation (positive number, 3 attempts).
+Order Processing: Link products to clients, auto-calculate totals, track order history. 
 Financial Reports:
-
-Calculate total daily revenue.
-
-Generate a detailed final report showing sales per client and a breakdown of products sold.
+Total daily revenue.
+Detailed final report: sales per client, product breakdown.
 
 🛠️ Data Structure
-The system uses two primary dictionaries to manage data:
-
-clients_db: Stores client profiles, including their specific order history.
-
-registered_products: Stores available items using a unique integer ID as a key.
+clients_db: Dictionary storing client profiles and their order history.
+registered_products: Dictionary of products using unique integer IDs as keys.
 
 📖 Usage
-Run the script: Execute the file using Python 3.x.
 
-Bash
-python your_script_name.py
-Navigate the Menu: Use the numeric keys (0-6) to interact with the system:
+Menu Options (0–6):
 
-1: Register a new client.
-
-2: Add a new product to the catalog.
-
-3: Create a purchase order for an existing client.
-
-4: View all clients and their current orders.
-
-5: Quick view of the total money earned.
-
-6: Generate a comprehensive summary of the day.
+1.Register new client
+2.Add new product
+3.Create purchase order
+4.View all clients and orders
+5.View total revenue
+6.Generate daily summary
+7.Exit of the programm.
 
 🔍 Validation Rules
-To ensure data integrity, the script includes the following checks:
-
-IDs: Must be numeric and unique.
-
-Names: Must contain only letters and spaces.
-
-Emails: Must end in @gmail.com or @hotmail.com and must be unique.
-
-Prices: Must be a positive number (users get 3 attempts to enter a valid price).
+IDs: Numeric and unique.
+Names: Letters and spaces only.
+Emails: Must end in @gmail.com or @hotmail.com, and be unique.
+Prices: Positive numbers (3 input attempts allowed).
 
 📄 Example Final Report
-Plaintext
 ============================================================
 FINAL DAILY REPORT
 ============================================================
