@@ -19,11 +19,17 @@ registered_products: Dictionary of products using unique integer IDs as keys.
 Menu Options (0–6):
 
 1.Register new client
+
 2.Add new product
+
 3.Create purchase order
+
 4.View all clients and orders
+
 5.View total revenue
+
 6.Generate daily summary
+
 7.Exit of the programm.
 
 🔍 Validation Rules
