@@ -41,5 +41,4 @@ def add():
     else:
         print("Not into the value request.")
 
-34
 add()
