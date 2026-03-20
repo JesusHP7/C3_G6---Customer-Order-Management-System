@@ -9,35 +9,28 @@ Order Processing: Link products to clients, auto-calculate totals, track order h
 Financial Reports:
 Total daily revenue.
 Detailed final report: sales per client, product breakdown.
-
 🛠️ Data Structure
 clients_db: Dictionary storing client profiles and their order history.
 registered_products: Dictionary of products using unique integer IDs as keys.
-
 📖 Usage
+Run the script:
 
-Menu Options (0–6):
+python your_script_name.py
 
-1.Register new client
+Menu Options (0–7):
 
-2.Add new product
-
-3.Create purchase order
-
-4.View all clients and orders
-
-5.View total revenue
-
-6.Generate daily summary
-
-7.Exit of the programm.
-
+Register new client
+Add new product
+Create purchase order
+View all clients and orders
+View total revenue
+Generate daily summary
+Exit program
 🔍 Validation Rules
-IDs: Numeric and unique.
+IDs: Numeric and unique. 
 Names: Letters and spaces only.
 Emails: Must end in @gmail.com or @hotmail.com, and be unique.
 Prices: Positive numbers (3 input attempts allowed).
-
 📄 Example Final Report
 ============================================================
 FINAL DAILY REPORT
