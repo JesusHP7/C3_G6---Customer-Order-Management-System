@@ -39,6 +39,7 @@ Emails: Must end in @gmail.com or @hotmail.com, and be unique.
 Prices: Positive numbers (3 input attempts allowed).
 
 📄 Example Final Report
+
 ============================================================
 FINAL DAILY REPORT
 ============================================================
@@ -48,6 +49,9 @@ Name: John Doe
 
 Total orders: 1
 Total revenue: 5000
+
+Products sold:
+manzana: 5   
 
 Products sold:
 manzana: 5
