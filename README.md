@@ -3,6 +3,7 @@ Client & Order Management System
 A lightweight Python CLI application for managing clients, products, and sales orders with data validation and automated reporting. 
 
 🚀 Features
+===============================================
 Client Management: Register clients with unique IDs, valid names (letters/spaces), and verified emails (@gmail.com, @hotmail.com).
 Inventory Control: Add products with automated price validation (positive number, 3 attempts).
 Order Processing: Link products to clients, auto-calculate totals, track order history. 
@@ -15,7 +16,7 @@ clients_db: Dictionary storing client profiles and their order history.
 registered_products: Dictionary of products using unique integer IDs as keys.
 
 📖 Usage
-
+===============================================
 Menu Options (0–6):
 
 1.Register new client
@@ -33,6 +34,7 @@ Menu Options (0–6):
 7.Exit of the programm.
 
 🔍 Validation Rules
+===============================================
 IDs: Numeric and unique.
 Names: Letters and spaces only.
 Emails: Must end in @gmail.com or @hotmail.com, and be unique.
